@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
-use Illuminate\Support\ServiceProvider;
 
 return [
 
@@ -17,6 +16,15 @@ return [
     */
 
     'name' => env('APP_NAME', 'Laravel'),
+
+    'ny_times_api_key' => env('NY_TIMES_API_KEY', null),
+    'ny_times_api_base_url' => env('NY_TIMES_API_BASE_URL', "https://api.nytimes.com/svc/search/v2"),
+
+    'news_api_org_api_key' => env('NEWS_API_ORG_API_KEY', null),
+    'news_api_org_api_base_url' => env('NEWS_API_ORG_API_KEY_BASE_URL', "https://newsapi.org/v2"),
+
+    'the_guardian_api_key' => env('THE_GUARDIAN_API_KEY', null),
+    'the_guardian_api_base_url' => env('THE_GUARDIAN_BASE_URL', "https://content.guardianapis.com"),
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +163,34 @@ return [
     |
     */
 
-    'providers' => ServiceProvider::defaultProviders()->merge([
+    'providers' => [
+
+        /*
+         * Laravel Framework Service Providers...
+         */
+        Illuminate\Auth\AuthServiceProvider::class,
+        Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        Illuminate\Bus\BusServiceProvider::class,
+        Illuminate\Cache\CacheServiceProvider::class,
+        Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+        Illuminate\Cookie\CookieServiceProvider::class,
+        Illuminate\Database\DatabaseServiceProvider::class,
+        Illuminate\Encryption\EncryptionServiceProvider::class,
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+        Illuminate\Foundation\Providers\FoundationServiceProvider::class,
+        Illuminate\Hashing\HashServiceProvider::class,
+        Illuminate\Mail\MailServiceProvider::class,
+        Illuminate\Notifications\NotificationServiceProvider::class,
+        Illuminate\Pagination\PaginationServiceProvider::class,
+        Illuminate\Pipeline\PipelineServiceProvider::class,
+        Illuminate\Queue\QueueServiceProvider::class,
+        Illuminate\Redis\RedisServiceProvider::class,
+        Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
+        Illuminate\Session\SessionServiceProvider::class,
+        Illuminate\Translation\TranslationServiceProvider::class,
+        Illuminate\Validation\ValidationServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -168,7 +203,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-    ])->toArray(),
+
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -182,7 +218,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+        // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
 ];

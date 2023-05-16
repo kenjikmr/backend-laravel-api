@@ -22,7 +22,8 @@ services:
       - ./storage/database:/var/lib/mysql
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
     container_name: feed-server-phpmyadmin
     networks:
       - feed
@@ -34,7 +35,7 @@ services:
     build: ./docker/nginx
     restart: always
     ports:
-      - "8080:80"
+      - "8000:80"
     volumes:
       - ./:/var/www
     depends_on:
