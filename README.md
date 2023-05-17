@@ -1,11 +1,11 @@
 # Overview
 
-This is an open source project that implements a news
+This is a test project that implements a news
 aggregator website that pulls articles from various sources. It was developed in PHP using the Laravel Framework 10, MySQL database and MVC design pattern. This repository is the Restful API backend only. The frontend is written in ReactJS and can be seen here:
 
 This application a couple of features such as user sign up, user log-in, retrieve user data, personalize news feed preferences and search for Articles in multiple sources like: NewsAPI.org, The Guardian and The New York Times.
 
-## System Requirements (Mac OS, Windows or Linux)
+## System Requirements
 * [Docker](https://www.docker.com/get-started)
 * [Docker Compose](https://docs.docker.com/compose/install)
 * [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
