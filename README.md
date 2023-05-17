@@ -39,8 +39,7 @@ Install dependencies and set directory permissions and cache:
 docker exec -it feed-server-php_fpm /bin/sh bootstrap.sh
 ```
 
-### Notes: 
-- Remember to set all the API keys under .env file
+Remember to set all the API keys under .env file
 
 After all these steps, the project will be running on port 8080: http://localhost:8080. All http requests send and receive JSON data.
 
